@@ -9,13 +9,13 @@ class State extends Component{
     }
     Subscribe = () =>{
         this.setState({
-            content : "Thanks for subscribing !"
+            content : "Thanks for subscribing !:)"
         })
     }
     render(){
-        return(
+        return( 
             <div>
-                <h1>{this.state.content}</h1>
+                <h1>{this.state.content}</h1> 
                 <button onClick={this.Subscribe}>Subscribe</button>
             </div>
         )

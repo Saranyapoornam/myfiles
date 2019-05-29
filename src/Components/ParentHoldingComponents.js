@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import WithoutPure from './WithoutPureComponent';
 import PureComponentContent from './PureComponent';
+import MemoComponent from './MemoComponent';
 
 class ParentHoldingComponents extends Component{
     constructor(){
@@ -24,6 +25,7 @@ class ParentHoldingComponents extends Component{
             <div>
                  <WithoutPure message={this.state.message}/>
             <PureComponentContent message={this.state.message}/>
+            <MemoComponent  message={this.state.message}/>
             </div>
            
         )

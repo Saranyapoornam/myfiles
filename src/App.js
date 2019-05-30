@@ -14,6 +14,20 @@ import ConditionalRender from './Components/ConditionalRendering';
 import ListArray from './Components/ListAndArray';
 import Fragment from './Components/Fragment';
 import ParentHoldingComponents from './Components/ParentHoldingComponents';
+import LifeCycleComponent from './Components/LifeCycleComponent';
+import RefComponent from './Components/RefsComponent';
+import RefWithClassParent from './Components/RefswithClassParent';
+import ForwardingRefWithParent from './Components/ForwadingRefParent';
+import PortalComponent from './Components/PortalComponent';
+import HocWithClick from './Components/HocWithClick';
+import HocWithHover from './Components/HocWithHover';
+import RenderProps from './Components/RenderProps';
+import RenderPropsWithClick from './Components/RenderPropsWithClick';
+import RenderPropsWithHover from './Components/RenderPropsWithHover';
+import { UserProvider } from './Components/Context';
+import ContextComponentC from './Components/ContextComponentC';
+// import ErrorHoldingComponent from './Components/ErrorBoundaryHoldingComponents';
+// import ErrorBoundary from './Components/ErrorBoundary';
 
 
 
@@ -39,6 +53,33 @@ function App() {
       <ListArray/>
       <Fragment/>
       <ParentHoldingComponents/>
+      <LifeCycleComponent/>
+      <RefComponent/>
+      <RefWithClassParent/>
+      <ForwardingRefWithParent/>
+      <PortalComponent/>
+      {/*
+       <ErrorBoundary>
+         <ErrorHoldingComponent technology ="Javascript"/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <ErrorHoldingComponent technology ="React"/>
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <ErrorHoldingComponent technology ="Angular"/>
+      </ErrorBoundary>
+      */}
+     <HocWithClick name="react"/>
+     <HocWithHover/>
+     <RenderProps render={(count,incrementCount)=>{
+       return(<RenderPropsWithClick count={count} IncrementCount={incrementCount}/>)
+     }}/>
+      <RenderProps render={(count,incrementCount)=>{
+       return(<RenderPropsWithHover count={count} IncrementCount={incrementCount}/>)
+     }}/>
+      <UserProvider value="User">
+        <ContextComponentC/>
+      </UserProvider>
     </div>
   );
 }

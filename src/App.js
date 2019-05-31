@@ -32,6 +32,7 @@ import UseStateWithObject from './Components/UseStateWithObject';
 import UseStateWithArray from './Components/UseStateWithArray';
 import UseEffectHook from './Components/UseEffectHook';
 import GetAjax from './Components/GetAjax';
+import PostService from './Components/PostService';
 
 // import ErrorHoldingComponent from './Components/ErrorBoundaryHoldingComponents';
 // import ErrorBoundary from './Components/ErrorBoundary';
@@ -90,6 +91,7 @@ function App() {
       <UseStateWithArray/>
       <UseEffectHook/>
       <GetAjax/>
+      <PostService/>
       <UserProvider value="User">
         <ContextComponentC/>
       </UserProvider>

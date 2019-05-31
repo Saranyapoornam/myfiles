@@ -26,6 +26,13 @@ import RenderPropsWithClick from './Components/RenderPropsWithClick';
 import RenderPropsWithHover from './Components/RenderPropsWithHover';
 import { UserProvider } from './Components/Context';
 import ContextComponentC from './Components/ContextComponentC';
+import UseStateHook from './Components/UseStateHook';
+import UseStateWithPrevState from './Components/UseStateWithPrevState';
+import UseStateWithObject from './Components/UseStateWithObject';
+import UseStateWithArray from './Components/UseStateWithArray';
+import UseEffectHook from './Components/UseEffectHook';
+import GetAjax from './Components/GetAjax';
+
 // import ErrorHoldingComponent from './Components/ErrorBoundaryHoldingComponents';
 // import ErrorBoundary from './Components/ErrorBoundary';
 
@@ -77,9 +84,16 @@ function App() {
       <RenderProps render={(count,incrementCount)=>{
        return(<RenderPropsWithHover count={count} IncrementCount={incrementCount}/>)
      }}/>
+      <UseStateHook/>
+      <UseStateWithPrevState/>
+      <UseStateWithObject/>
+      <UseStateWithArray/>
+      <UseEffectHook/>
+      <GetAjax/>
       <UserProvider value="User">
         <ContextComponentC/>
       </UserProvider>
+     
     </div>
   );
 }

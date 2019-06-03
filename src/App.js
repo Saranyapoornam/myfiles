@@ -33,6 +33,7 @@ import UseStateWithArray from './Components/UseStateWithArray';
 import UseEffectHook from './Components/UseEffectHook';
 import GetAjax from './Components/GetAjax';
 import PostService from './Components/PostService';
+import CRUDOperation from './Components/CRUDOperation';
 
 // import ErrorHoldingComponent from './Components/ErrorBoundaryHoldingComponents';
 // import ErrorBoundary from './Components/ErrorBoundary';
@@ -44,6 +45,7 @@ import PostService from './Components/PostService';
 function App() {
   return (
     <div className="App">
+      <CRUDOperation />
       <Greet/>
       <Welcome/>
       <Hello/>
